@@ -9,8 +9,8 @@
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 # Home page
-GET     /                           controllers.HomeController.index
-GET     /cleanup                    controllers.HomeController.cleanup
+GET     /                           controllers.Application.index
+GET     /cleanup                    controllers.Application.cleanup
 
 #Widgets
 GET     /api/widgets                controllers.Widgets.index
