@@ -7,6 +7,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.12.2"
 
+javaOptions in Universal += "-jvm-debug 5005"
+
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.0" % Test
 
@@ -17,6 +19,7 @@ libraryDependencies ++= Seq(
   specs2 % Test,
   "org.reactivemongo" %% "play2-reactivemongo" % "0.12.5-play26"
 )
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.widgetmanager.controllers._"
